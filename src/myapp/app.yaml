@@ -1,0 +1,17 @@
+application: myapp
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /.*
+  script: _go_app
+  secure: always
+
+env_variables:
+  SHOPIFY_API_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  SHOPIFY_API_SECRET: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  DEV_SHOPIFY_API_KEY: yyyyyyyyyyyyyyyyyyy
+  DEV_SHOPIFY_API_SECRET: yyyyyyyyyyyyyyyyyyy
+  HOSTNAME: "https://YYYYYYYYYYY.appspot.com"
+  DEV_HOSTNAME: "https://YYYYYYYYYYY.ngrok.io"
